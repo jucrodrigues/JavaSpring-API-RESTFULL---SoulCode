@@ -1,0 +1,110 @@
+USE pizarriaSQL;
+
+-- Inserindo 10 registros na tabela bebida
+INSERT INTO bebida (Name, valor) VALUES
+('Coca-Cola', 7.50),
+('Guaraná Antarctica', 8.20),
+('Suco de Laranja', 6.90),
+('Água Mineral', 3.50),
+('Chá Gelado', 5.80),
+('Limão-Soda', 9.75),
+('Café Gelado', 4.60),
+('Mate Leão', 7.25),
+('Vinho Tinto', 10.0),
+('Chopp Pilsen', 9.50);
+
+-- Inserindo 10 registros na tabela cliente
+INSERT INTO cliente (nome, telefone, endereco, login, senha) VALUES
+('João', '9999-9999', 'Rua A, 123', 'joao', 'senha123'),
+('Maria', '8888-8888', 'Rua B, 456', 'maria', 'senha456'),
+('Pedro', '7777-7777', 'Rua C, 789', 'pedro', 'senha789'),
+('Ana', '6666-6666', 'Rua D, 012', 'ana', 'senha012'),
+('Carlos', '5555-5555', 'Rua E, 345', 'carlos', 'senha345'),
+('Paula', '4444-4444', 'Rua F, 678', 'paula', 'senha678'),
+('Lucas', '3333-3333', 'Rua G, 901', 'lucas', 'senha901'),
+('Laura', '2222-2222', 'Rua H, 234', 'laura', 'senha234'),
+('Mariana', '1111-1111', 'Rua I, 567', 'mariana', 'senha567'),
+('Fernando', '0000-0000', 'Rua J, 890', 'fernando', 'senha890');
+
+-- Inserindo 10 registros na tabela fornada
+INSERT INTO fornada (num_fornada, qtd_Pizzas) VALUES
+(1, 8),
+(2, 10),
+(3, 6),
+(4, 12),
+(5, 9),
+(6, 7),
+(7, 11),
+(8, 5),
+(9, 10),
+(10, 8);
+
+
+-- Inserindo 10 registros na tabela ingredientes
+INSERT INTO ingrediente (nome, valor) VALUES
+('Molho de Tomate', 2.50),
+('Queijo Mussarela', 3.00),
+('Presunto', 4.20),
+('Cogumelos', 2.80),
+('Tomate', 1.50),
+('Cebola', 1.80),
+('Azeitonas', 2.00),
+('Pepperoni', 3.50),
+('Bacon', 4.00),
+('Pimentão', 2.30);
+
+
+-- Supondo que já existem 10 registros na tabela cliente e 10 na tabela fornada
+-- Inserindo 10 registros na tabela pedido
+INSERT INTO pedido (cliente_id, data_Hora, fornada_id) VALUES
+(1, CURRENT_TIMESTAMP, 1),
+(2, CURRENT_TIMESTAMP, 2),
+(3, CURRENT_TIMESTAMP, 3),
+(4, CURRENT_TIMESTAMP, 4),
+(5, CURRENT_TIMESTAMP, 5),
+(6, CURRENT_TIMESTAMP, 6),
+(7, CURRENT_TIMESTAMP, 7),
+(8, CURRENT_TIMESTAMP, 8),
+(9, CURRENT_TIMESTAMP, 9),
+(10, CURRENT_TIMESTAMP, 10);
+
+-- Inserindo 10 registros na tabela pizza
+INSERT INTO pizza (nome, valor_base, personalizada) VALUES
+('Pizza de Calabresa', 30.00, true),
+('Pizza de Margherita', 28.00, false),
+('Pizza de Frango com Catupiry', 32.00, true),
+('Pizza de Mussarela', 26.00, false),
+('Pizza de Quatro Queijos', 34.00, true),
+('Pizza de Pepperoni', 33.00, false),
+('Pizza de Portuguesa', 31.00, true),
+('Pizza de Bacon', 35.00, false),
+('Pizza de Atum', 29.00, true),
+('Pizza Vegetariana', 30.00, false);
+
+
+-- Inserindo 10 registros na tabela pizza_pedida
+INSERT INTO pizza_pedida (pizza_id, pedido_id, tamanho_id, quantidade) VALUES
+(1, 1, 1, 1),
+(2, 2, 2, 2),
+(3, 3, 3, 1),
+(4, 4, 4, 3),
+(5, 5, 5, 2),
+(6, 6, 6, 1),
+(7, 7, 7, 2),
+(8, 8, 8, 1),
+(9, 9, 9, 3),
+(10, 10, 10, 2);
+
+
+-- Inserindo 10 registros na tabela tamanho
+INSERT INTO tamanho (nome, desconto) VALUES
+('Pequena', 0.00),
+('Média', 0.10),
+('Grande', 0.20),
+('Família', 0.30),
+('Broto', 0.05),
+('Gigante', 0.25),
+('Individual', 0.15),
+('Super', 0.35),
+('Especial', 0.40),
+('Maxi', 0.50);
